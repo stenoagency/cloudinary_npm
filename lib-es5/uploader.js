@@ -452,6 +452,12 @@ function call_api(action, callback, options, get_params) {
     options = {};
   }
 
+  if (options.stream) {
+    // server communication will be handled by javascript streams and errors will be handled by a callback
+    // so to avoid unhandled promise rejection exceptions we need to ignore errors from the deferred promise
+    deferred.promise.catch(function () {});
+  }
+
   var _get_params$call = get_params.call(),
       _get_params$call2 = _slicedToArray(_get_params$call, 3),
       params = _get_params$call2[0],
