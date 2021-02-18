@@ -1,4 +1,13 @@
-[![Build Status](https://travis-ci.org/cloudinary/cloudinary_npm.svg?branch=master)](https://travis-ci.org/cloudinary/cloudinary_npm)
+For Steno
+==========
+This is a fork of https://github.com/cloudinary/cloudinary_npm which we'll use until they fix an unhandled rejection error that happens when an error occurs during streaming uploads. 
+
+If you make any other changes and you want to check them in, you first need to run with out any errors:
+
+```
+npm run compile
+```
+If you encounter errors you'll need to fix them, and then repeat the complile process until it compiles successfully. After it compiles successfully you'll be able to check in your changes as well as any newly generated changes in the lib-es5 folder. 
 
 Cloudinary
 ==========
